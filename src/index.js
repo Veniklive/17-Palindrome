@@ -4,12 +4,12 @@
  */
 
 function definePolydrome(str) {
-  let arr = str
+  let letters = str
     .replace(/[-–—,. !?:;"']/g, "")
     .toLowerCase()
     .split("");
-  for (let i = 0; i < arr.length / 2; i++) {
-    if (arr[i] !== arr[arr.length - 1 - i]) {
+  for (let i = 0; i < letters.length / 2; i++) {
+    if (letters[i] !== letters[letters.length - 1 - i]) {
       return false;
     }
   }
