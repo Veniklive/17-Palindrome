@@ -1,3 +1,8 @@
+/** Determines whether a string or word is a palindrome.
+ * @param {String} str - String to check.
+ * @returns {boolean} Palindrome check result.
+ */
+
 function definePolydrome(str) {
   let arr = str
     .replace(/[-–—,. !?:;"']/g, "")
