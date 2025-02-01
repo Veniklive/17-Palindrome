@@ -4,16 +4,8 @@
  */
 
 function definePolydrome(str) {
-  let letters = str
-    .replace(/[-–—,. !?:;"']/g, "")
-    .toLowerCase()
-    .split("");
-  for (let i = 0; i < letters.length / 2; i++) {
-    if (letters[i] !== letters[letters.length - 1 - i]) {
-      return false;
-    }
-  }
-  return true;
+  str = str.replace(/[-–—,. !?:;"']/g, "").toLowerCase();
+  return str === str.split("").reverse().join("") ? true : false;
 }
 
 let inputStr = "Ущипне — та шатен: пищу!";
